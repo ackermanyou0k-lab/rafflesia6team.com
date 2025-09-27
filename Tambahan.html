@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sejarah Rafflesia Arnoldii</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a0000, #3b0000, #660000);
+      color: #f5f2e7;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 2.4em;
+      font-weight: bold;
+      border-bottom: 3px solid #ff0000;
+      letter-spacing: 2px;
+      color: #ff4d4d;
+      text-shadow: 0 0 15px #800000;
+      font-family: 'Merriweather', serif;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      text-align: center;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.65);
+      border-bottom: 2px solid #ff0000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeIn 1.2s ease;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #ff3333;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc66;
+      text-shadow: 0 0 10px #ff3333;
+    }
+    nav a:hover::after { width: 100%; }
+
+    section {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 1200px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+      animation: fadeInUp 1.2s ease;
+    }
+    section h1 {
+      text-align: center;
+      color: #ff4d4d;
+      text-shadow: 0 0 12px #660000;
+      margin-bottom: 25px;
+      font-family: 'Merriweather', serif;
+    }
+    section p { text-align: justify; margin-bottom: 18px; }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .event {
+      padding: 20px;
+      background: rgba(25,25,25,0.9);
+      border-left: 4px solid #ff3333;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .event:hover {
+      transform: translateX(10px);
+      box-shadow: 0 0 20px rgba(255,0,0,0.5);
+    }
+    .event h3 {
+      margin: 0;
+      color: #ffcc66;
+    }
+    .event p { color: #f5f2e7; margin-top: 5px; }
+
+    /* Galeri */
+    #galeri img {
+      width: 300px;
+      border: 3px solid #ff3333;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    #galeri img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255,0,0,0.7);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 2px solid #ff0000;
+      color: #d4af37;
+      margin-top: 40px;
+      font-family: 'Merriweather', serif;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>Sejarah Penemuan Rafflesia Arnoldii</header>
+
+  <nav>
+   <a href="index.html">Beranda</a>
+    <a href="Deskripsi.html">Deskripsi</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="fakta.html">Fakta Unik</a>
+    <a href="Tambahan.html">Tambahan</a>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+<a href="quiz.html">Quiz</a>
+  </nav>
+
+  <section>
+    <h1>🌸 Awal Penemuan</h1>
+    <p>
+      Rafflesia Arnoldii pertama kali ditemukan pada tahun <b>1818</b> di hutan hujan Sumatra.
+      Penemunya adalah seorang pemandu lokal yang bekerja untuk tim ekspedisi yang dipimpin oleh
+      <b>Dr. Joseph Arnold</b> dan <b>Sir Stamford Raffles</b>, Gubernur Bengkulu saat itu.
+    </p>
+
+    <div class="timeline">
+      <div class="event">
+        <h3>1818 – Penemuan Pertama</h3>
+        <p>Ekspedisi Joseph Arnold menemukan bunga raksasa ini di hutan Bengkulu. Temuan tersebut kemudian dinamai <i>Rafflesia Arnoldii</i>.</p>
+      </div>
+      <div class="event">
+        <h3>1821 – Dokumentasi Ilmiah</h3>
+        <p>Deskripsi ilmiah pertama diterbitkan dalam jurnal botani, membuat dunia internasional mengenal bunga unik ini.</p>
+      </div>
+      <div class="event">
+        <h3>1980-an – Simbol Bengkulu</h3>
+        <p>Pemerintah Indonesia menetapkan Rafflesia Arnoldii sebagai flora identitas Provinsi Bengkulu.</p>
+      </div>
+      <div class="event">
+        <h3>Sekarang</h3>
+        <p>Bunga ini menjadi simbol konservasi hutan tropis dan kebanggaan flora Indonesia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proses">
+    <h1>🌱 Proses Mekar</h1>
+    <p>Perjalanan Rafflesia menuju mekarnya sangat panjang:</p>
+    <ul style="line-height:1.8; text-align:left;">
+      <li>🌿 <b>Kuncup</b>: butuh waktu 6–9 bulan untuk berkembang.</li>
+      <li>🌸 <b>Mekar</b>: hanya bertahan 5–7 hari.</li>
+      <li>🥀 <b>Layu</b>: setelah itu bunga akan membusuk.</li>
+    </ul>
+  </section>
+
+  <section id="konservasi">
+    <h1>🌏 Upaya Pelestarian</h1>
+    <p>
+      Karena kelangkaannya, Rafflesia Arnoldii dilindungi oleh hukum Indonesia. 
+      Pemerintah dan lembaga konservasi berusaha menjaga habitat aslinya di hutan tropis Sumatra dan Kalimantan. 
+      Beberapa kawasan konservasi yang menjadi habitat Rafflesia adalah 
+      <b>Taman Nasional Kerinci Seblat</b> dan <b>Taman Nasional Bukit Barisan Selatan</b>.
+    </p>
+  </section>
+
+  <section id="galeri">
+    <h1>📷 Galeri Rafflesia Arnoldii</h1>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+      <img src="Rafflesia Arnoldi1.jpg" alt="Rafflesia 1">
+      <img src="Rafflesia Arnoldi2.jpg" alt="Rafflesia 2">
+      <img src="Rafflesia Arnoldi3.jpg" alt="Rafflesia 3">
+    </div>
+  </section>
+
+  <section id="funfact">
+    <h1>✨ Fun Fact</h1>
+    <p>
+      Meskipun terkenal dengan bau busuknya, Rafflesia Arnoldii sangat penting bagi ekosistem hutan. 
+      Bau busuknya justru membantu menarik serangga untuk proses penyerbukan. 
+      Fakta menarik lainnya, bunga ini kadang disebut sebagai 
+      <i>"Corpse Flower"</i> atau bunga bangkai raksasa.
+    </p>
+  </section>
+
+  <footer>&copy; 2025 Website Rafflesia Arnoldii | Kelompok 6</footer>
+</body>
+</html>
