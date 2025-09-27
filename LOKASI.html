@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Lokasi Rafflesia Arnoldi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a0000, #4d0000, #660000);
+      color: #f5f2e7;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 20px;
+      text-align: center;
+      font-size: 2.2em;
+      font-weight: bold;
+      border-bottom: 2px solid #ff0000;
+      letter-spacing: 2px;
+      color: #ff3333;
+      text-shadow: 0 0 8px #660000;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 12px;
+      text-align: center;
+      border-bottom: 2px solid #ff0000;
+      animation: fadeIn 1.2s ease;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #ff3333;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc66;
+      text-shadow: 0 0 10px #ff3333;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 1100px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff3333;
+      margin-bottom: 30px;
+      text-shadow: 0 0 8px #660000;
+      animation: fadeIn 1.5s ease;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 18px;
+      animation: fadeInUp 1.5s ease;
+    }
+    p:nth-of-type(2) { animation-delay: 0.3s; }
+    p:nth-of-type(3) { animation-delay: 0.6s; }
+
+    iframe {
+      display: block;
+      margin: 30px auto 10px;
+      border: 4px solid #d4af37;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+      animation: fadeInUp 2s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.75);
+      border-top: 2px solid #ff0000;
+      color: #d4af37;
+      animation: fadeIn 2.2s ease;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.8em;
+      }
+      nav a {
+        margin: 0 12px;
+        font-size: 0.95em;
+      }
+      section {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Lokasi Rafflesia Arnoldi
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="Deskripsi.html">Deskripsi</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="fakta.html">Fakta Unik</a>
+    <a href="Tambahan.html">Tambahan</a>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+<a href="quiz.html">Quiz</a>
+  </nav>
+
+  <section>
+    <h1>Lokasi Rafflesia Arnoldi</h1>
+    <p>
+      <b>Rafflesia arnoldii</b> dapat ditemukan secara alami di hutan hujan tropis 
+      Indonesia, terutama di <b>Sumatra</b> dan sebagian wilayah <b>Kalimantan</b>. 
+      Habitatnya umumnya berada di kawasan hutan dataran rendah yang lembap, 
+      jauh dari pemukiman manusia, karena bunga ini sangat bergantung pada 
+      inang tumbuhan merambat <i>Tetrastigma</i>.
+    </p>
+    <p>
+      Salah satu lokasi terkenal tempat bunga ini tumbuh adalah di 
+      <b>Taman Nasional Bukit Barisan Selatan</b>, <b>Taman Nasional Kerinci Seblat</b>, 
+      dan <b>Taman Nasional Way Kambas</b> di Pulau Sumatra. Di Bengkulu, Rafflesia 
+      bahkan menjadi ikon daerah yang dilestarikan secara khusus. Selain itu, 
+      beberapa jenis Rafflesia juga bisa dijumpai di hutan Kalimantan Barat 
+      dan Kalimantan Timur.
+    </p>
+    <p>
+      Karena sifatnya yang langka dan waktu mekarnya yang singkat, 
+      melihat langsung bunga ini di habitat aslinya merupakan pengalaman istimewa. 
+      Tidak semua wisatawan beruntung menyaksikan mekarnya, sehingga kawasan konservasi 
+      yang menjaga Rafflesia menjadi sangat penting dalam upaya pelestarian.
+    </p>
+
+    <!-- Peta Google Maps -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127586.84123749534!2d102.20043896928618!3d-3.7928457963220734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e37d8b9f6c6a8c1%3A0x3039d80b220d8f0!2sBengkulu!5e0!3m2!1sid!2sid!4v1727430000000!5m2!1sid!2sid" 
+      width="100%" height="400" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 Website Rafflesia Arnoldi | Kelompok 6 Rafflesia Arnoldi
+  </footer>
+</body>
+</html>

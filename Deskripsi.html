@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rafflesia Arnoldi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a0000, #4d0000, #660000);
+      color: #f5f2e7;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 25px 15px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      border-bottom: 2px solid #ff0000;
+      letter-spacing: 3px;
+      color: #ff3333;
+      text-shadow: 0 0 8px #660000, 0 0 15px #ff0000;
+      animation: fadeInDown 1s ease;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #ff0000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeIn 1.5s ease;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #ff3333;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc66;
+      text-shadow: 0 0 10px #ff3333;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* SECTION */
+    section {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 1100px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      text-align: center;
+      animation: fadeInUp 1.2s ease;
+    }
+    section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      border: 3px solid #ff3333;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      animation: zoomIn 1.5s ease;
+    }
+    section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255, 0, 0, 0.7);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff3333;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #660000;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      animation: fadeIn 2.2s ease;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 22px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 2px solid #ff0000;
+      color: #d4af37;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.8em;
+      }
+      nav a {
+        margin: 0 12px;
+        font-size: 0.95em;
+      }
+      section {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Rafflesia Arnoldi
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="Deskripsi.html">Deskripsi</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="fakta.html">Fakta Unik</a>
+    <a href="Tambahan.html">Tambahan</a>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+<a href="quiz.html">Quiz</a>
+  </nav>
+
+  <section>
+    <h1>Rafflesia Arnoldi</h1>
+    <p><b>Rafflesia arnoldii</b>, yang juga dikenal dengan sebutan <i>Bunga Raksasa</i> atau 
+    <i>Padma Raksasa</i>, merupakan salah satu keajaiban alam yang menjadi kebanggaan Indonesia. 
+    Bunga ini tercatat sebagai bunga tunggal terbesar di dunia, dengan diameter yang dapat 
+    mencapai lebih dari satu meter dan berat hingga 10 kilogram.</p>
+    <p> Rafflesia pertama kali ditemukan pada tahun 1818 di hutan tropis Bengkulu, Sumatra, oleh seorang dokter dan naturalis Inggris, Joseph Arnold. Penemuan ini dilakukan dalam sebuah ekspedisi yang dipimpin oleh Sir Stamford Raffles. Untuk menghormati keduanya, bunga ini kemudian diberi nama <i>Rafflesia arnoldii</i>. Hingga kini, bunga ini masih tumbuh secara alami di beberapa wilayah Sumatra dan Kalimantan, meski keberadaannya semakin langka. 
+</p> 
+<p> 
+Berbeda dengan kebanyakan tumbuhan lain, Rafflesia tidak memiliki batang, daun, maupun akar. Ia merupakan tumbuhan parasit murni yang sepenuhnya bergantung pada tanaman inang, yaitu tumbuhan merambat dari genus <i>Tetrastigma</i>. Seluruh proses hidupnya berlangsung di dalam jaringan inang, dan hanya ketika tiba saatnya berbunga, kuncup besar berwarna merah kecokelatan itu muncul dari permukaan tanah dan kemudian mekar menjadi bunga raksasa yang menakjubkan. </p> 
+<p> Saat mekar, Rafflesia mengeluarkan bau busuk yang mirip dengan aroma daging membusuk. Meskipun terkesan menjijikkan, bau ini memiliki fungsi penting: menarik serangga seperti lalat bangkai untuk datang dan membantu proses penyerbukan. Karena itulah, bunga ini juga dikenal dengan nama <b>Bunga Bangkai</b>. Mekar Rafflesia hanya berlangsung selama beberapa hari, setelah itu kelopak raksasanya akan layu dan membusuk, meninggalkan kesan dramatis seolah alam sendiri sedang menampilkan pertunjukan singkat. </p>
+<p> Keberadaan Rafflesia arnoldii saat ini semakin terancam oleh rusaknya habitat hutan hujan tropis. Sebagai bunga yang sangat langka, ia dilindungi oleh undang-undang dan sering dijadikan simbol penting dalam upaya pelestarian keanekaragaman hayati. Bagi masyarakat Indonesia, bunga ini bukan hanya sekadar flora, tetapi juga bagian dari identitas nasional. Keunikan dan keindahannya bahkan menjadikan Rafflesia sebagai salah satu dari tiga bunga nasional Indonesia, bersama dengan Melati Putih dan Anggrek Bulan. </p>
+<p> Rafflesia arnoldii adalah bukti betapa luar biasanya kekayaan alam Nusantara. Di balik tampilannya yang megah dan baunya yang khas, bunga ini mengajarkan bahwa setiap makhluk hidup, sekecil apa pun perannya, memiliki arti penting dalam menjaga keseimbangan ekosistem. Melestarikan Rafflesia berarti menjaga warisan alam bagi generasi mendatang. </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Website Rafflesia Arnoldi | Kelompok 6 Rafflesia Arnoldi
+  </footer>
+</body>
+</html>

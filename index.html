@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Rafflesia Arnoldii</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a0000, #4d0000, #660000);
+      color: #f5f2e7;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 25px 15px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      border-bottom: 2px solid #ff0000;
+      letter-spacing: 3px;
+      color: #ff3333;
+      text-shadow: 0 0 8px #660000, 0 0 15px #ff0000;
+      animation: fadeInDown 1s ease;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #ff0000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeIn 1.5s ease;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #ff3333;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc66;
+      text-shadow: 0 0 10px #ff3333;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* SECTION */
+    section {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 1100px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      text-align: center;
+      animation: fadeInUp 1.2s ease;
+    }
+    section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      border: 3px solid #ff3333;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      animation: zoomIn 1.5s ease;
+    }
+    section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255, 0, 0, 0.7);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff3333;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #660000;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      animation: fadeIn 2.2s ease;
+    }
+
+    /* SLIDER */
+    .slider-container {
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      height: 500px;
+      margin: 50px auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+    }
+    .text-content {
+      flex: 1;
+      background: rgba(0,0,0,0.7);
+      border-right: 2px solid #ff3333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+    }
+    .text-content h2 { color: #ff3333; margin-bottom: 20px; }
+    .text-content p { font-size: 16px; line-height: 1.6; color: #ffb3b3; }
+    .slider {
+      flex: 2;
+      position: relative;
+    }
+    .slider img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .slide-controls {
+      position: absolute; bottom: 20px; width: 100%; text-align: center;
+    }
+    .arrow {
+      cursor: pointer; font-size: 28px;
+      color: #ff4d4d; margin: 0 20px; user-select: none;
+    }
+    .dot {
+      height: 12px; width: 12px; margin: 0 6px;
+      background-color: #ff9999; border-radius: 50%;
+      display: inline-block; cursor: pointer;
+    }
+    .dot.active { background-color: #ff3333; }
+    .slide-number {
+      position: absolute; top: 15px; right: 15px;
+      font-size: 14px; color: #ff9999; font-style: italic;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 22px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 2px solid #ff0000;
+      color: #d4af37;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Selamat Datang di Website Rafflesia Arnoldii
+  </header>
+
+  <nav>
+   <a href="index.html">Beranda</a>
+    <a href="Deskripsi.html">Deskripsi</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="fakta.html">Fakta Unik</a>
+    <a href="Tambahan.html">Tambahan</a>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+<a href="quiz.html">Quiz</a>
+  </nav>
+
+  <section id="deskripsi">
+    <img src="Rafflesia Arnoldi.jpg" alt="Rafflesia Arnoldii">
+    <h1>Rafflesia Arnoldii – Bunga Raksasa Indonesia</h1>
+    <p>
+      <b>Rafflesia arnoldii</b> adalah salah satu bunga paling langka dan unik di dunia. 
+      Bunga ini terkenal karena ukurannya yang raksasa, dapat mencapai diameter lebih dari 1 meter, 
+      serta aromanya yang khas menyerupai bau bangkai. 
+    </p>
+    <p>
+      Tumbuhan ini hidup sebagai parasit pada akar tumbuhan merambat di hutan hujan tropis, 
+      terutama di wilayah Sumatra dan Kalimantan. Karena keunikannya, Rafflesia arnoldii 
+      telah menjadi simbol flora langka Indonesia sekaligus ikon kebanggaan bangsa.
+    </p>
+    <p>
+      Melalui website ini, kami mengajak Anda untuk mengenal lebih dekat keindahan, 
+      fakta unik, serta upaya pelestarian bunga langka yang hanya mekar dalam waktu singkat ini.
+    </p>
+  </section>
+
+  <!-- SLIDER Fakta Unik -->
+  <div class="slider-container" id="fakta">
+    <div class="text-content">
+      <h2 id="slide-title">Loading...</h2>
+      <p id="slide-description">Memuat fakta menarik...</p>
+    </div>
+    <div class="slider">
+      <div class="slide-number" id="slide-number">01 / 05</div>
+      <img id="slide-image" src="" alt="Fakta Rafflesia" />
+      <div class="slide-controls">
+        <span class="arrow" onclick="changeSlide(-1)">&#8592;</span>
+        <span id="dots"></span>
+        <span class="arrow" onclick="changeSlide(1)">&#8594;</span>
+      </div>
+    </div>
+  </div>
+
+  <footer id="biodata">
+    &copy; 2025 Website Rafflesia Arnoldii | Kelompok 6 Rafflesia Arnoldii
+  </footer>
+
+<script>
+  const slides = [
+    {
+      image: "Rafflesia Arnoldi1.jpg",
+      title: "🌺 Bunga Terbesar di Dunia",
+      description: "Rafflesia Arnoldii memiliki diameter hingga 1 meter dan berat mencapai 11 kilogram."
+    },
+    {
+      image: "Rafflesia Arnoldi2.jpg",
+      title: "⏳ Mekar Sangat Singkat",
+      description: "Bunga ini hanya mekar selama 5–7 hari, setelah itu akan layu dan membusuk."
+    },
+    {
+      image: "Rafflesia Arnoldi3.jpg",
+      title: "🌿 Parasit Unik",
+      description: "Rafflesia tidak memiliki batang, daun, atau akar. Ia hidup sebagai parasit pada tumbuhan inang Tetrastigma."
+    },
+    {
+      image: "Rafflesia Arnoldi4.jpg",
+      title: "👃 Bau Menyengat",
+      description: "Ketika mekar, Rafflesia mengeluarkan bau busuk seperti daging membusuk untuk menarik lalat penyerbuk."
+    },
+    {
+      image: "Rafflesia Arnoldi.jpg",
+      title: "🌏 Ikon Bengkulu",
+      description: "Rafflesia Arnoldii adalah ikon Provinsi Bengkulu dan menjadi salah satu kebanggaan flora Indonesia."
+    }
+  ];
+
+  let currentIndex = 0;
+  function showSlide(index) {
+    if (index >= slides.length) { currentIndex = 0; }
+    else if (index < 0) { currentIndex = slides.length - 1; }
+    else { currentIndex = index; }
+
+    const currentSlide = slides[currentIndex];
+    document.getElementById("slide-image").src = currentSlide.image;
+    document.getElementById("slide-title").textContent = currentSlide.title;
+    document.getElementById("slide-description").textContent = currentSlide.description;
+    document.getElementById("slide-number").textContent =
+      `${String(currentIndex + 1).padStart(2, "0")} / ${slides.length}`;
+
+    const dotsContainer = document.getElementById("dots");
+    dotsContainer.innerHTML = "";
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.className = "dot" + (i === currentIndex ? " active" : "");
+      dot.onclick = () => showSlide(i);
+      dotsContainer.appendChild(dot);
+    });
+  }
+  function changeSlide(step) { showSlide(currentIndex + step); }
+  showSlide(0);
+</script>
+</body>
+</html>

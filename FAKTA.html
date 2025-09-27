@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Fakta Unik Rafflesia Arnoldi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a0000, #4d0000, #660000);
+      color: #f5f2e7;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 25px 15px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      border-bottom: 2px solid #ff0000;
+      letter-spacing: 3px;
+      color: #ff3333;
+      text-shadow: 0 0 8px #660000, 0 0 15px #ff0000;
+      animation: fadeInDown 1s ease;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #ff0000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeIn 1.5s ease;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #ff3333;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc66;
+      text-shadow: 0 0 10px #ff3333;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* SECTION */
+    section {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 1100px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      text-align: center;
+      animation: fadeInUp 1.2s ease;
+    }
+    h1 {
+      text-align: center;
+      color: #ff3333;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #660000;
+      animation: fadeIn 2s ease;
+    }
+    section > p {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      animation: fadeIn 2.2s ease;
+    }
+
+    /* GRID & CARD */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      justify-items: center;
+    }
+    .card {
+      background: rgba(20, 20, 20, 0.85);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #ff3333;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+      color: #f5f2e7;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: zoomIn 1.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+    }
+    .card h2 {
+      margin: 10px 0 10px;
+      color: #ff3333;
+      text-shadow: 0 0 6px #660000;
+    }
+    .card p {
+      margin: 5px 0;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 22px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 2px solid #ff0000;
+      color: #d4af37;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.8em;
+      }
+      nav a {
+        margin: 0 12px;
+        font-size: 0.95em;
+      }
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Fakta Unik Rafflesia Arnoldi
+  </header>
+
+  <nav>
+     <a href="index.html">Beranda</a>
+    <a href="Deskripsi.html">Deskripsi</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="fakta.html">Fakta Unik</a>
+    <a href="Tambahan.html">Tambahan</a>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+<a href="quiz.html">Quiz</a>
+  </nav>
+
+  <section>
+    <h1>Fakta Unik tentang Rafflesia Arnoldi</h1>
+    <p>
+      Rafflesia arnoldii bukan hanya sekadar bunga terbesar di dunia, 
+      tetapi juga menyimpan banyak fakta unik yang membuatnya menjadi ikon 
+      flora langka Indonesia. Berikut beberapa hal menarik yang perlu kamu ketahui:
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Tanpa Akar, Batang, dan Daun</h2>
+        <p>
+          Rafflesia tidak memiliki struktur tumbuhan biasa. Ia hidup sebagai 
+          parasit pada akar atau batang tumbuhan merambat <i>Tetrastigma</i>.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Aroma Bau Bangkai</h2>
+        <p>
+          Bunganya mengeluarkan bau busuk mirip daging membusuk untuk menarik 
+          lalat sebagai penyerbuk alami.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Bunga Raksasa</h2>
+        <p>
+          Diameter bunga bisa mencapai lebih dari 100 cm dengan berat hingga 10 kg, 
+          menjadikannya bunga tunggal terbesar di dunia.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Mekar Singkat</h2>
+        <p>
+          Rafflesia hanya mekar 5–7 hari saja, setelah itu kelopaknya akan layu 
+          dan membusuk. Hal ini membuat momen mekarnya sangat langka.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Sulit Dibudidayakan</h2>
+        <p>
+          Karena sangat bergantung pada inang tertentu, bunga ini hampir tidak bisa 
+          ditanam di luar habitat aslinya.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Status Konservasi</h2>
+        <p>
+          Rafflesia arnoldii termasuk tumbuhan langka yang dilindungi di Indonesia, 
+          dan telah ditetapkan sebagai salah satu bunga nasional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Website Rafflesia Arnoldi | Kelompok 6 Rafflesia Arnoldi
+  </footer>
+</body>
+</html>

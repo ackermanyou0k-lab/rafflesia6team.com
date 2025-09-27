@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Rafflesia Arnoldii</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a0000, #4d0000, #660000);
+      color: #f5f2e7;
+      min-height: 100vh;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px;
+      text-align: center;
+      border-bottom: 2px solid red;
+      z-index: 10;
+    }
+    nav a {
+      color: #ff3333;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc66;
+    }
+
+    /* Quiz Box */
+    section.quiz {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      text-align: center;
+      animation: fadeIn 0.8s ease-in;
+    }
+    h2 {
+      color: #ffcc66;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #660000;
+    }
+    .question {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+
+    /* Options */
+    .options button {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+      background: #d4af37;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 70%;
+    }
+    .options button:hover {
+      background: #ffcc66;
+      transform: scale(1.05);
+    }
+
+    #result, #final-score {
+      margin-top: 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    #final-score {
+      color: #ffcc66;
+      font-size: 1.3em;
+    }
+
+    /* Tombol Next dengan Panah */
+    #next-btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #d4af37, #ffcc66);
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(255, 204, 102, 0.6);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #next-btn:hover {
+      background: linear-gradient(135deg, #ffcc66, #ffd966);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 204, 102, 0.9);
+    }
+    #next-btn span {
+      font-size: 1.2em;
+      transition: transform 0.3s;
+    }
+    #next-btn:hover span {
+      transform: translateX(5px);
+    }
+
+    .hidden {
+      display: none;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="Deskripsi.html">Deskripsi</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="fakta.html">Fakta Unik</a>
+    <a href="Tambahan.html">Tambahan</a>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+    <a href="quiz.html">Quiz</a>
+  </nav>
+
+  <!-- Quiz Section -->
+  <section class="quiz">
+    <h2>Quiz Rafflesia Arnoldii 🌺</h2>
+    <div id="quiz-container">
+      <div class="question" id="question"></div>
+      <div class="options" id="options"></div>
+      <div id="result"></div>
+      <button id="next-btn" class="hidden" onclick="nextQuestion()">
+        Soal Selanjutnya <span>➡</span>
+      </button>
+    </div>
+    <div id="final-score" class="hidden"></div>
+  </section>
+
+  <script>
+    const quizData = [
+      {
+        question: "Berapa lama bunga Rafflesia Arnoldii biasanya mekar?",
+        options: ["1–2 hari", "5–7 hari", "10–15 hari"],
+        answer: "5–7 hari"
+      },
+      {
+        question: "Rafflesia Arnoldii dikenal sebagai bunga apa?",
+        options: ["Bunga Matahari", "Bunga Bangkai", "Bunga Teratai"],
+        answer: "Bunga Bangkai"
+      },
+      {
+        question: "Dimana Rafflesia Arnoldii banyak ditemukan?",
+        options: ["Kalimantan", "Sumatra", "Papua"],
+        answer: "Sumatra"
+      },
+      {
+        question: "Berapa diameter Rafflesia Arnoldii bisa mencapai?",
+        options: ["50 cm", "100 cm", "150 cm"],
+        answer: "100 cm"
+      },
+      {
+        question: "Mengapa bunga ini berbau busuk?",
+        options: ["Untuk menarik lalat sebagai penyerbuk", "Karena polusi", "Karena daunnya lebar"],
+        answer: "Untuk menarik lalat sebagai penyerbuk"
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const resultEl = document.getElementById("result");
+    const nextBtn = document.getElementById("next-btn");
+    const finalScoreEl = document.getElementById("final-score");
+
+    function loadQuestion() {
+      let q = quizData[currentQuestion];
+      questionEl.textContent = q.question;
+      optionsEl.innerHTML = "";
+      resultEl.textContent = "";
+      q.options.forEach(opt => {
+        let btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(opt);
+        optionsEl.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      let correct = quizData[currentQuestion].answer;
+      if (selected === correct) {
+        resultEl.textContent = "✅ Benar!";
+        resultEl.style.color = "#00ff7f";
+        score++;
+      } else {
+        resultEl.textContent = "❌ Salah! Jawaban benar: " + correct;
+        resultEl.style.color = "#ff3333";
+      }
+      nextBtn.classList.remove("hidden");
+      Array.from(optionsEl.children).forEach(btn => btn.disabled = true);
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < quizData.length) {
+        loadQuestion();
+        nextBtn.classList.add("hidden");
+      } else {
+        showFinalScore();
+      }
+    }
+
+    function showFinalScore() {
+      questionEl.style.display = "none";
+      optionsEl.style.display = "none";
+      resultEl.style.display = "none";
+      nextBtn.style.display = "none";
+      finalScoreEl.classList.remove("hidden");
+      finalScoreEl.textContent = `🎉 Quiz Selesai! Skor kamu: ${score} dari ${quizData.length}`;
+    }
+
+    loadQuestion();
+  </script>
+
+</body>
+</html>

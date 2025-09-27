@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Biodata Anggota Kelompok</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a0000, #3b0000, #660000);
+      color: #f5f2e7;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 2.4em;
+      font-weight: bold;
+      border-bottom: 3px solid #ff0000;
+      letter-spacing: 2px;
+      color: #ff4d4d;
+      text-shadow: 0 0 15px #800000;
+      font-family: 'Merriweather', serif;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 10px;
+      animation: fadeIn 1.2s ease;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #ff3333;
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc66;
+      text-shadow: 0 0 10px #ff3333;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.65);
+      margin: 50px auto;
+      padding: 40px;
+      max-width: 1200px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4d4d;
+      margin-bottom: 40px;
+      text-shadow: 0 0 12px #660000;
+      font-family: 'Merriweather', serif;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+      gap: 25px;
+      justify-items: center;
+    }
+
+    .card {
+      background: rgba(25, 25, 25, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #ff4d4d;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.35);
+      color: #f5f2e7;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      width: 90%;
+      max-width: 320px;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(255,0,0,0.15), rgba(255,255,0,0.05));
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 0 35px rgba(255, 0, 0, 0.7);
+    }
+
+    .card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #ff3333;
+      margin-bottom: 18px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .card:hover img { transform: scale(1.08); }
+
+    .card h2 {
+      margin: 12px 0 10px;
+      color: #ff4d4d;
+      border-bottom: 2px solid #ff3333;
+      padding-bottom: 6px;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+
+    .info {
+      text-align: left;
+      margin-top: 15px;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    .info b { color: #d4af37; }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95em;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 2px solid #ff0000;
+      color: #d4af37;
+      margin-top: 40px;
+      font-family: 'Merriweather', serif;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Biodata Anggota Kelompok
+  </header>
+
+  <nav>
+   <a href="index.html">Beranda</a>
+    <a href="Deskripsi.html">Deskripsi</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="fakta.html">Fakta Unik</a>
+    <a href="Tambahan.html">Tambahan</a>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+<a href="quiz.html">Quiz</a>
+  </nav>
+
+  <section>
+    <h1>Profil Anggota Kelompok</h1>
+    <div class="grid">
+
+      <!-- Anggota 1 -->
+      <div class="card">
+        <img src="Taung.jpg" alt="Foto Ahmad Farrel Syarif Firjatullah">
+        <h2>Ahmad Farrel Syarif Firjatullah</h2>
+        <div class="info">
+          <p><b>Panggilan:</b> Farrel</p>
+          <p><b>TTL:</b> Banyuwangi, 11 Januari 2008</p>
+          <p><b>Alamat:</b> Banyuwangi</p>
+          <p><b>Hobi:</b> Olahraga</p>
+          <p><b>MBTI:</b> ESFJ</p>
+        </div>
+      </div>
+
+      <!-- Anggota 2 -->
+      <div class="card">
+        <img src="bintang.jpg" alt="Foto Ardana Bintang Hidayat">
+        <h2>Ardana Bintang Hidayat</h2>
+        <div class="info">
+          <p><b>Panggilan:</b> Bintang</p>
+          <p><b>TTL:</b> Banyuwangi, 18 Oktober 2007</p>
+          <p><b>Alamat:</b> Glagah</p>
+          <p><b>Hobi:</b> Lari, Badminton, Game</p>
+          <p><b>MBTI:</b> ISFP</p>
+        </div>
+      </div>
+
+      <!-- Anggota 3 -->
+      <div class="card">
+        <img src="rizky.jpg" alt="Foto M Eka Rizki Hidayat">
+        <h2>M Eka Rizki Hidayat</h2>
+        <div class="info">
+          <p><b>Panggilan:</b> Rizki</p>
+          <p><b>TTL:</b> Lumajang, 28 Juli 2008</p>
+          <p><b>Alamat:</b> Banyuwangi</p>
+          <p><b>Hobi:</b> Futsal</p>
+          <p><b>MBTI:</b> INTP</p>
+        </div>
+      </div>
+
+      <!-- Anggota 4 -->
+      <div class="card">
+        <img src="yayak.jpg" alt="Foto Mutiara Safitri">
+        <h2>Mutiara Safitri</h2>
+        <div class="info">
+          <p><b>Panggilan:</b> Tiara</p>
+          <p><b>TTL:</b> Banyuwangi, 28 Oktober 2007</p>
+          <p><b>Alamat:</b> Giri</p>
+          <p><b>Hobi:</b> Berenang</p>
+          <p><b>MBTI:</b> ENFJ</p>
+        </div>
+      </div>
+
+      <!-- Anggota 5 -->
+      <div class="card">
+        <img src="fotoku.jpg" alt="Foto Pandu Dewanata">
+        <h2>Pandu Dewanata</h2>
+        <div class="info">
+          <p><b>Panggilan:</b> Pandu</p>
+          <p><b>TTL:</b> Banyuwangi, 25 Agustus 2007</p>
+          <p><b>Alamat:</b> Giri</p>
+          <p><b>Hobi:</b> Menggambar, Musik</p>
+          <p><b>MBTI:</b> INFJ</p>
+        </div>
+      </div>
+
+      <!-- Anggota 6 -->
+      <div class="card">
+        <img src="fitri.jpg" alt="Foto Syafitri Dwi Ramadhani">
+        <h2>Syafitri Dwi Ramadhani</h2>
+        <div class="info">
+          <p><b>Panggilan:</b> Fitri</p>
+          <p><b>TTL:</b> Banyuwangi, 4 Oktober 2007</p>
+          <p><b>Alamat:</b> Glagah</p>
+          <p><b>Hobi:</b> Traveling</p>
+          <p><b>MBTI:</b> ESTP</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Website Rafflesia Arnoldi | Kelompok 6 Rafflesia Arnoldi
+  </footer>
+</body>
+</html>
