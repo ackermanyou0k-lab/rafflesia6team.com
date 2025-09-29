@@ -25,9 +25,7 @@
       color: #ff4d4d;
       text-shadow: 0 0 15px #800000;
       font-family: 'Merriweather', serif;
-      animation: fadeInDown 1s ease;
-    }
-
+}
     nav {
       text-align: center;
       margin-top: 10px;
@@ -58,7 +56,6 @@
     nav a:hover::after {
       width: 100%;
     }
-
     section {
       background: rgba(0, 0, 0, 0.65);
       margin: 50px auto;
@@ -66,9 +63,8 @@
       max-width: 1200px;
       border-radius: 15px;
       box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
-      animation: fadeInUp 1.2s ease;
+      text-align: center;
     }
-
     h1 {
       text-align: center;
       color: #ff4d4d;
@@ -79,12 +75,11 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+      grid-template-columns: repeat(3, 1fr);
       gap: 25px;
       justify-items: center;
     }
-
-    .card {
+     .card {
       background: rgba(25, 25, 25, 0.9);
       padding: 25px;
       border-radius: 15px;
@@ -114,7 +109,6 @@
       transform: translateY(-12px) scale(1.02);
       box-shadow: 0 0 35px rgba(255, 0, 0, 0.7);
     }
-
     .card img {
       width: 140px;
       height: 140px;
@@ -124,7 +118,7 @@
       object-fit: cover;
       transition: transform 0.3s ease;
     }
-    .card:hover img { transform: scale(1.08); }
+    .card:hover img { transform: scale(1.1); }
 
     .card h2 {
       margin: 12px 0 10px;
@@ -132,147 +126,372 @@
       border-bottom: 2px solid #ff3333;
       padding-bottom: 6px;
       font-size: 1.2em;
-      letter-spacing: 1px;
     }
 
-    .info {
-      text-align: left;
-      margin-top: 15px;
-      font-size: 0.95em;
-      line-height: 1.6;
     }
-    .info b { color: #d4af37; }
+
+    .info { font-size: 0.95em; }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #1a0000;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      color: #f5f2e7;
+      box-shadow: 0 0 25px #ff0000;
+      animation: zoomIn 0.4s ease;
+      max-height: 80vh;
+      overflow-y: auto; /* kalau isi panjang bisa di-scroll */
+    }
+    .modal-content h2 { color: #ff4d4d; }
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ffcc66;
+    }
+    .close:hover { color: #ff3333; }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
 
     footer {
       text-align: center;
-      padding: 25px;
-      font-size: 0.95em;
+      padding: 20px;
       background: rgba(0, 0, 0, 0.85);
-      border-top: 2px solid #ff0000;
       color: #d4af37;
-      margin-top: 40px;
-      font-family: 'Merriweather', serif;
-      animation: fadeIn 1.5s ease;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      border-top: 2px solid #ff0000;
     }
   </style>
 </head>
 <body>
-  <header>
-    Biodata Anggota Kelompok
-  </header>
+  <header>Biodata Anggota Kelompok</header>
 
   <nav>
-   <a href="index.html">Beranda</a>
+    <a href="index.html">Beranda</a>
     <a href="Deskripsi.html">Deskripsi</a>
     <a href="lokasi.html">Lokasi</a>
     <a href="fakta.html">Fakta Unik</a>
     <a href="Tambahan.html">Tambahan</a>
     <a href="Biodata Kelompok.html">Biodata Kelompok</a>
-<a href="quiz.html">Quiz</a>
+    <a href="quiz.html">Quiz</a>
   </nav>
 
   <section>
     <h1>Profil Anggota Kelompok</h1>
     <div class="grid">
-
-      <!-- Anggota 1 -->
-      <div class="card">
-        <img src="taung.jpg" alt="Foto Ahmad Farrel Syarif Firjatullah">
-        <h2>Ahmad Farrel Syarif Firjatullah</h2>
-        <div class="info">
-          <p><b>Panggilan:</b> Farrel</p>
-          <p><b>TTL:</b> Banyuwangi, 11 Januari 2008</p>
-          <p><b>Alamat:</b> Banyuwangi</p>
-          <p><b>Hobi:</b> Olahraga</p>
-          <p><b>MBTI:</b> ESFJ</p>
-        </div>
+      <div class="card" onclick="openModal('modal1')">
+        <img src="taung.jpg" alt="Farrel">
+        <h2>Ahmad Farrel</h2>
       </div>
-
-      <!-- Anggota 2 -->
-      <div class="card">
-        <img src="bintang.jpg" alt="Foto Ardana Bintang Hidayat">
-        <h2>Ardana Bintang Hidayat</h2>
-        <div class="info">
-          <p><b>Panggilan:</b> Bintang</p>
-          <p><b>TTL:</b> Banyuwangi, 18 Oktober 2007</p>
-          <p><b>Alamat:</b> Glagah</p>
-          <p><b>Hobi:</b> Lari, Badminton, Game</p>
-          <p><b>MBTI:</b> ISFP</p>
-        </div>
+      <div class="card" onclick="openModal('modal2')">
+        <img src="bintang.jpg" alt="Bintang">
+        <h2>Ardana Bintang</h2>
       </div>
-
-      <!-- Anggota 3 -->
-      <div class="card">
-        <img src="rizky.jpg" alt="Foto M Eka Rizki Hidayat">
-        <h2>M Eka Rizki Hidayat</h2>
-        <div class="info">
-          <p><b>Panggilan:</b> Rizki</p>
-          <p><b>TTL:</b> Lumajang, 28 Juli 2008</p>
-          <p><b>Alamat:</b> Banyuwangi</p>
-          <p><b>Hobi:</b> Futsal</p>
-          <p><b>MBTI:</b> INTP</p>
-        </div>
+      <div class="card" onclick="openModal('modal3')">
+        <img src="rizky.jpg" alt="Rizki">
+        <h2>M Eka Rizki</h2>
       </div>
-
-      <!-- Anggota 4 -->
-      <div class="card">
-        <img src="yayak.jpg" alt="Foto Mutiara Safitri">
+      <div class="card" onclick="openModal('modal4')">
+        <img src="yayak.jpg" alt="Mutiara">
         <h2>Mutiara Safitri</h2>
-        <div class="info">
-          <p><b>Panggilan:</b> Tiara</p>
-          <p><b>TTL:</b> Banyuwangi, 28 Oktober 2007</p>
-          <p><b>Alamat:</b> Giri</p>
-          <p><b>Hobi:</b> Berenang</p>
-          <p><b>MBTI:</b> ENFJ</p>
-        </div>
       </div>
-
-      <!-- Anggota 5 -->
-      <div class="card">
-        <img src="pandu.jpg" alt="Foto Pandu Dewanata">
+      <div class="card" onclick="openModal('modal5')">
+        <img src="pandu.jpg" alt="Pandu">
         <h2>Pandu Dewanata</h2>
-        <div class="info">
-          <p><b>Panggilan:</b> Pandu</p>
-          <p><b>TTL:</b> Banyuwangi, 25 Agustus 2007</p>
-          <p><b>Alamat:</b> Giri</p>
-          <p><b>Hobi:</b> Menggambar, Musik</p>
-          <p><b>MBTI:</b> INFJ</p>
-        </div>
       </div>
-
-      <!-- Anggota 6 -->
-      <div class="card">
-        <img src="fitri.jpg" alt="Foto Syafitri Dwi Ramadhani">
-        <h2>Syafitri Dwi Ramadhani</h2>
-        <div class="info">
-          <p><b>Panggilan:</b> Fitri</p>
-          <p><b>TTL:</b> Banyuwangi, 4 Oktober 2007</p>
-          <p><b>Alamat:</b> Glagah</p>
-          <p><b>Hobi:</b> Traveling</p>
-          <p><b>MBTI:</b> ESTP</p>
-        </div>
+      <div class="card" onclick="openModal('modal6')">
+        <img src="fitri.jpg" alt="Fitri">
+        <h2>Syafitri Dwi</h2>
       </div>
-
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Website Rafflesia Arnoldi | Kelompok 6 Rafflesia Arnoldi
+
+  <!-- MODAL BIODATA -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+<h2>Ahmad Farrel</h2>
+<p><b>TTL:</b> Banyuwangi, 11 Januari 2008</p>
+<p><b>Alamat:</b> Banyuwangi</p>
+<p><b>Agama:</b> Islam</p>
+<p><b>Hobi:</b> Olahraga</p>
+<p><b>MBTI:</b> ESFJ</p>
+<p><b>Zodiak:</b> Capricorn</p>
+<p><b>Tb:</b> 165cm</p>
+<p><b>Bb:</b> 53kg</p>
+<p><b>NIS:</b> 13240</p>
+<p><b>Jurusan:</b> Teknik</p>
+<p><b>Tk:</b> TK Al Khairiyah</p> 
+<p><b>Sd:</b> SD Al Khairiyahh</p>
+<p><b>Smp:</b> MTSN 1 Banyuwangi</p>
+<p><b>Sma:</b> SMAN 1 Glagah</p>
+<p><b>Studi Lanjut:</b> Institut Teknologi Bandung</p>
+<p><b>Kuliah Di Luar Negeri:</b> National University of Singapore</p>
+<p><b>Negara yang Ingin di Kunjungi:</b> Kanada</p>
+<p><b>Cita-Cita:</b> Orang Sukses</p>
+<p><b>Makanan Favorit:</b> Nasi Goreng</p>
+<p><b>Minuman Favorit:</b> Es Jeruk</p>
+<p><b>Warna Favorit:</b> Putih/Hitam</p>
+<p><b>Lagu Favorit:</b> Sholawat </p>
+<p><b>Hewan Favorit:</b> Harimau</p>
+<p><b>Buku Favorit:</b> Berjanji</p>
+<p><b>Kartun Favorit:</b> Upin Ipin</p>
+<p><b>Medsos Favorit:</b> Whatsapp</p>
+<p><b>YouTuber Favorit:</b> Syamsuri Firdaus</p>
+<p><b>Genre Film Favorit:</b> Horror</p>
+<p><b>Genre Lagu Favorit:</b> Sholawatan</p>
+<p><b>Artist Favorit:</b> Gus Iqdam</p>
+<p><b>Artist Musik Favorit:</b> Bernadya</p>
+<p><b>Model rambut:</b> Tapper Fade</p>
+<p><b>Style baju:</b> Skena/Star Boy</p>
+<p><b>Motto Hidup:</b> Suka Memberi</p>
+<p><b>Bahasa Apa yang di Kuasai:</b> Jawa, Indonesia</p>
+<p><b>Nama IG:</b> _farrelsy</p>
+</div></div>
+
+    <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+<h2>Ardana Bintang</h2>
+<p><b>TTL:</b> Banyuwangi, 18 Oktober 2007</p>
+<p><b>Alamat:</b> Glagah</p>
+<p><b>Agama:</b> Islam</p>
+<p><b>Hobi:</b> Lari, Badminton, Game</p>
+<p><b>MBTI:</b> ISFP</p>
+<p><b>Zodiak:</b> Libra</p>
+<p><b>Tb:</b> 168cm</p>
+<p><b>Bb:</b> 50kg</p>
+<p><b>NIS:</b> 13275</p>
+<p><b>Jurusan:</b> Teknik</p>
+<p><b>Tk:</b> TK Sriwijaya</p>
+<p><b>Sd:</b> SDU Habibullah</p>
+<p><b>Smp:</b> MTSN 1 Banyuwangi</p>
+<p><b>Sma:</b> SMAN 1 Glagah</p>
+<p><b>Studi Lanjut:</b> Universitas Negeri Jember</p>
+<p><b>Kuliah Di Luar Negeri:</b> Oxford University</p>
+<p><b>Negara yang Ingin di Kunjungi:</b> Mesir</p>
+<p><b>Cita-Cita:</b> Kemenkumham</p>
+<p><b>Makanan Favorit:</b> Rawon</p>
+<p><b>Minuman Favorit:</b> Es Teh</p>
+<p><b>Warna Favorit:</b> Biru</p>
+<p><b>Lagu Favorit:</b> Pupus (dewa 19)</p>
+<p><b>Hewan Favorit:</b> Kucing</p>
+<p><b>Buku Favorit:</b> Project Malaka</p>
+<p><b>Kartun Favorit:</b> Bernard</p>
+<p><b>Medsos Favorit:</b> Instagram</p>
+<p><b>YouTuber Favorit:</b> Miawaug</p>
+<p><b>Genre Film Favorit:</b> Action</p>
+<p><b>Genre Lagu Favorit:</b> Pop punk</p>
+<p><b>Artist Favorit:</b> Jarot</p>
+<p><b>Artist Musik Favorit:</b> Sheila on 7</p>
+<p><b>Model rambut:</b> Cepmek</p>
+<p><b>Style baju:</b> Bebas</p>
+<p><b>Motto Hidup:</b> Kuat di lakoni lak gak kuat ditinggal ngopi</p>
+<p><b>Bahasa Apa yang di Kuasai:</b> Jawa, Indonesia</p>
+<p><b>Nama IG:</b> ardnbntng</p>
+</div></div>
+
+    <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+<h2>M Eka Rizki</h2>
+<p><b>TTL:</b> Lumajang, 28 Juli 2008</p>
+<p><b>Alamat:</b> Banyuwangi</p>
+<p><b>Agama:</b> Islam</p>
+<p><b>Hobi:</b> Futsal</p>
+<p><b>MBTI:</b> INTP</p>
+<p><b>Zodiak:</b> Libra</p>
+<p><b>Tb:</b> 170cm</p>
+<p><b>Bb:</b> 82kg</p>
+<p><b>NIS:</b> 13429</p>
+<p><b>Jurusan:</b> Teknik</p>
+<p><b>Tk:</b> TK Aisyiyah </p>
+<p><b>Sd:</b> SD Muhammadiyah</p>
+<p><b>Smp:</b> SMPN 2 Banyuwangi</p>
+<p><b>Sma:</b> SMAN 1 Glagah</p>
+<p><b>Studi Lanjut:</b> Institut Teknologi Bandung</p>
+<p><b>Kuliah Di Luar Negeri:</b> National University of Singapore</p> 
+<p><b>Negara yang Ingin di Kunjungi:</b> Spanyol</p>
+<p><b>Cita-Cita:</b> Bos tambang</p>
+<p><b>Makanan Favorit:</b> Mie Ayam</p>
+<p><b>Minuman Favorit:</b> Es Teh</p>
+<p><b>Warna Favorit:</b> Merah</p>
+<p><b>Lagu Favorit:</b> Still With You</p>
+<p><b>Hewan Favorit:</b> Kucing</p>
+<p><b>Buku Favorit:</b> Pergi (Tere Liye)</p>
+<p><b>Kartun Favorit:</b> Doraemon, Boboiboy</p>
+<p><b>Medsos Favorit:</b> Tiktok</p>
+<p><b>YouTuber Favorit:</b> Van</p>
+<p><b>Genre Film Favorit:</b> Action</p>
+<p><b>Genre Lagu Favorit:</b> Balada Jazzy</p>
+<p><b>Artist Favorit:</b> Ronaldo</p>
+<p><b>Artist Musik Favorit:</b> Justin Bieber</p>
+<p><b>Model rambut:</b> French crop</p>
+<p><b>Style baju:</b> Casual</p>
+<p><b>Motto Hidup:</b> ingin menjadi orang sukses dan suka menolong sesama</p>
+<p><b>Bahasa Apa yang di Kuasai:</b> Jawa, Indonesia, Inggris</p>
+<p><b>Nama IG:</b> ek.rsky</p>
+</div></div>
+
+    <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+<h2>Mutiara Safitri</h2>
+<p><b>TTL:</b> Banyuwangi, 28 Oktober 2007</p>
+<p><b>Alamat:</b> Giri</p>
+<p><b>Agama:</b> Islam</p>
+<p><b>Hobi:</b> Berenang, Nonton Drakor</p>
+<p><b>MBTI:</b> ENFJ</p>
+<p><b>Zodiak:</b> Scorpio</p>  
+<p><b>Tb:</b> 158cm</p>
+<p><b>Bb:</b> 45kg</p>
+<p><b>NIS:</b> 13469</p>
+<p><b>Jurusan:</b> Teknik</p>
+<p><b>Tk:</b> TK Sriwijaya</p>
+<p><b>Sd:</b> SD Mi Darul Huda</p>
+<p><b>Smp:</b> SMPN 1 Giri</p>
+<p><b>Sma:</b> SMAN 1 Glagah</p>
+<p><b>Studi Lanjut:</b> Universitas Negeri Malang</p>
+<p><b>Kuliah Di Luar Negeri:</b> National University of Singapore</p>
+<p><b>Negara yang Ingin di Kunjungi:</b> Jepang</p>
+<p><b>Cita-Cita:</b> Pengusaha Sapi</p>
+<p><b>Makanan Favorit:</b> Nasi Tempong</p>
+<p><b>Minuman Favorit:</b> Es Matcha</p>
+<p><b>Warna Favorit:</b> Coklat</p>
+<p><b>Lagu Favorit:</b> Bokong Semok</p>
+<p><b>Hewan Favorit:</b> Kucing</p>
+<p><b>Buku Favorit:</b> Laskar Pelangi</p>
+<p><b>Kartun Favorit:</b> Marsha and The Bear</p>
+<p><b>Medsos Favorit:</b> Instagram</p>
+<p><b>YouTuber Favorit:</b> Tanboy kun</p>
+<p><b>Genre Film Favorit:</b> Thriller</p>
+<p><b>Genre Lagu Favorit:</b> Klasik</p>
+<p><b>Artist Favorit:</b> Fadil Jaidi</p>
+<p><b>Artist Musik Favorit:</b> Mahalini</p>
+<p><b>Model rambut:</b> Panjang</p>
+<p><b>Style baju:</b> Kalcer</p>
+<p><b>Motto Hidup:</b> ciptakan kesempatanmu sendiri</p>
+<p><b>Bahasa Apa yang di Kuasai:</b> Jawa, Indonesia, Osing</p>
+<p><b>Nama IG:</b> trxy_tir28</p>
+</div></div>
+
+    <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+<h2>Pandu Dewanata</h2>
+<p><b>TTL:</b> Banyuwangi, 25 Agustus 2007</p>
+<p><b>Alamat:</b> Giri</p>
+<p><b>Agama:</b> Islam</p>
+<p><b>Hobi:</b> Menggambar, Mendengarkan Musik</p>
+<p><b>MBTI:</b> INFJ</p>
+<p><b>Zodiak:</b> Libra</p>
+<p><b>Tb:</b> 175cm</p>
+<p><b>Bb:</b> 63kg</p>
+<p><b>NIS:</b> 13500</p>
+<p><b>Jurusan:</b> Teknik</p>
+<p><b>Tk:</b> TK Ramatullah</p>
+<p><b>Sd:</b> SDN Kepatihan</p>
+<p><b>Smp:</b> SMP Lazurdi Tursina Banyuwangi</p>
+<p><b>Sma:</b> SMAN 1 Glagah</p>
+<p><b>Studi Lanjut:</b> Institut Pemerintahan Dalam Negeri</p>
+<p><b>Kuliah Di Luar Negeri:</b> Oxford University</p>
+<p><b>Negara yang Ingin di Kunjungi:</b> Prancis</p>
+<p><b>Cita-Cita:</b> Orang Kaya dan Sukses</p>
+<p><b>Makanan Favorit:</b> Udang</p>
+<p><b>Minuman Favorit:</b> Cookies and Cream</p>
+<p><b>Warna Favorit:</b> Biru</p>
+<p><b>Lagu Favorit:</b> Sienna (The Marias)</p>
+<p><b>Hewan Favorit:</b> Kucing</p>
+<p><b>Buku Favorit:</b> Magnus the Chase God of Asgard</p>
+<p><b>Kartun Favorit:</b> The Tales Miraculous Ladybug and Cat Noir</p>
+<p><b>Medsos Favorit:</b> Tiktok</p>
+<p><b>YouTuber Favorit:</b> Ssundee</p>
+<p><b>Genre Film Favorit:</b> Action, Horror, Thriller, Romance</p>
+<p><b>Genre Lagu Favorit:</b> Pop, Classic, indie Rock</p>
+<p><b>Artist Favorit:</b> Ayaka Miyoshi, Adriana, Ella Freya, Scarlett Johansson, Tom Cruise, Tom Holland, Robert Downey Jr., Chris Evans, Emma Myers</p>
+<p><b>Artist Musik Favorit:</b> Arctic Monkeys, Lana Del Rey, Cigarettes After Sex</p>
+<p><b>Model rambut:</b> Comma hair</p>
+<p><b>Style baju:</b> Old Money, Softboy</p>
+<p><b>Motto Hidup:</b> Hidup itu harus ada Tujuan</p>
+<p><b>Bahasa Apa yang di Kuasai:</b> Indonesia, Inggris, Jepang(sedikit)</p>
+<p><b>Nama IG:</b> mizuto_pd</p>
+</div></div>
+
+    <div id="modal6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal6')">&times;</span>
+<h2>Syafitri Dwi</h2>
+<p><b>TTL:</b> Banyuwangi, 4 Oktober 2007</p>
+<p><b>Alamat:</b> Glagah</p>
+<p><b>Hobi:</b> Traveling</p>
+<p><b>MBTI:</b> ESTP</p>
+<p><b>Zodiak:</b> Libra</p>
+<p><b>Tb:</b> 160cm</p>
+<p><b>Bb:</b> 56kg</p>
+<p><b>NIS:</b> 13566</p>
+<p><b>Jurusan:</b> Teknik</p>
+<p><b>Tk:</b> TK YWKA</p>
+<p><b>Sd:</b> SDN 1 Ketapang</p>
+<p><b>Smp:</b> SMPN 1 Giri</p>
+<p><b>Sma:</b> SMAN 1 Glagah</p>
+<p><b>Studi Lanjut:</b> Universitas Airlangga</p>
+<p><b>Kuliah Di Luar Negeri:</b> University of Toronto</p>
+<p><b>Negara yang Ingin di Kunjungi:</b> Australia</p>
+<p><b>Cita-Cita:</b> PNS</p>
+<p><b>Makanan Favorit:</b> Sushi</p>
+<p><b>Minuman Favorit:</b> Matcha</p>
+<p><b>Warna Favorit:</b> Hijau, Pink</p>
+<p><b>Lagu Favorit:</b> You (Lloyd,Lil Wayne)</p>
+<p><b>Hewan Favorit:</b> Kucing</p>
+<p><b>Buku Favorit:</b> Novel</p>
+<p><b>Kartun Favorit:</b> Secret Jouju</p>
+<p><b>Medsos Favorit:</b> Tiktok</p>
+<p><b>YouTuber Favorit:</b> Jessica Jane</p>
+<p><b>Genre Film Favorit:</b> Drama</p>
+<p><b>Genre Lagu Favorit:</b> Pop</p>
+<p><b>Artist Favorit:</b> Aqeela Calista</p>
+<p><b>Artist Musik Favorit:</b> Frank Ocean</p>
+<p><b>Model rambut:</b> Butterfly</p>
+<p><b>Style baju:</b> Cewe Kue</p>
+<p><b>Motto Hidup:</b> Chasing goals, not people</p>
+<p><b>Bahasa Apa yang di Kuasai:</b> Jawa, Indonesia, Inggris</p>
+<p><b>Nama IG:</b> @syafitridr_</p>
+</div></div>
+
+   <footer>
+    &copy; 2025 Website Rafflesia Arnoldii | Kelompok 6
   </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(e) {
+      document.querySelectorAll('.modal').forEach(m => {
+        if (e.target == m) m.style.display = "none";
+      });
+    }
+  </script>
 </body>
 </html>
-
 
