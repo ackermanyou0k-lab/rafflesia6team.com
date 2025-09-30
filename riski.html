@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rafflesia Arnoldii - Biodata Pandu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1a0000, #4d0000, #660000);
+      color: #f5f2e7;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 25px 15px;
+      text-align: center;
+      font-size: 2.3em;
+      font-weight: bold;
+      border-bottom: 2px solid #ff0000;
+      letter-spacing: 2px;
+      color: #ff3333;
+      text-shadow: 0 0 8px #660000, 0 0 15px #ff0000;
+      animation: fadeInDown 1s ease;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #ff0000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      animation: fadeIn 1.5s ease;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    nav a:hover {
+      color: #ffcc66;
+      text-shadow: 0 0 8px #ff3333;
+    }
+
+    /* SECTION */
+    section {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 40px auto;
+      padding: 40px;
+      max-width: 1000px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      animation: fadeInUp 1.2s ease;
+    }
+    h1 {
+      text-align: center;
+      color: #ff3333;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px #660000;
+      animation: fadeIn 1.5s ease;
+    }
+
+    /* TABEL BIODATA */
+    .bio-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .bio-container img {
+      max-width: 220px;
+      border-radius: 12px;
+      border: 3px solid #ff3333;
+      box-shadow: 0 0 15px rgba(255,0,0,0.5);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 650px;
+    }
+    td {
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    td b {
+      color: #d4af37;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 2px solid #ff0000;
+      color: #d4af37;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .bio-container { flex-direction: column; align-items: center; }
+      table { font-size: 0.9em; }
+    }
+  </style>
+</head>
+<body>
+  <header>M Eka Rizki Hidayat</header>
+
+  <nav>
+    <a href="Biodata Kelompok.html">Biodata Kelompok</a>
+  </nav>
+
+  <section>
+    <h1>Biodata Lengkap</h1>
+    <div class="bio-container">
+      <a href="Biodata Kelompok.html"><img src="rizky.jpg" alt="Foto M Eka Rizki Hidayat"></a>
+      <table>
+        <tr><td><b>Nama:</b></td><td>M Eka Rizki Hidayat</td></tr>
+        <tr><td><b>TTL:</b></td><td>Lumajang, 28 Juli 2008</td></tr>
+        <tr><td><b>Alamat:</b></td><td>Banyuwangi</td></tr>
+        <tr><td><b>Agama:</b></td><td>Islam</td></tr>
+        <tr><td><b>Hobi:</b></td><td>Futsal</td></tr>
+        <tr><td><b>MBTI:</b></td><td>INTP</td></tr>
+        <tr><td><b>Zodiak:</b></td><td>Libra</td></tr>
+        <tr><td><b>Tinggi/Berat:</b></td><td>170 cm / 82 kg</td></tr>
+        <tr><td><b>NIS:</b></td><td>13429</td></tr>
+        <tr><td><b>Jurusan:</b></td><td>Teknik</td></tr>
+        <tr><td><b>Sekolah:</b></td><td>TK Aisyiyah → SD Muhammadiyah → SMPN 2 Banyuwangi → SMAN 1 Glagah</td></tr>
+        <tr><td><b>Studi Lanjut:</b></td><td>ITB</td></tr>
+        <tr><td><b>Kuliah Luar Negeri:</b></td><td>National University of Singapore</td></tr>
+        <tr><td><b>Negara Impian:</b></td><td>Spanyol</td></tr>
+        <tr><td><b>Cita-cita:</b></td><td>Bos tambang</td></tr>
+        <tr><td><b>Makanan Favorit:</b></td><td>Mie Ayam</td></tr>
+        <tr><td><b>Minuman Favorit:</b></td><td>Es Teh</td></tr>
+        <tr><td><b>Warna Favorit:</b></td><td>Merah</td></tr>
+        <tr><td><b>Lagu Favorit:</b></td><td>Still With You</td></tr>
+        <tr><td><b>Hewan Favorit:</b></td><td>Kucing</td></tr>
+        <tr><td><b>Buku Favorit:</b></td><td>Pergi (Tere Liye)</td></tr>
+        <tr><td><b>Kartun Favorit:</b></td><td>Doraemon, Boboiboy</td></tr>
+        <tr><td><b>Medsos Favorit:</b></td><td>Tiktok</td></tr>
+        <tr><td><b>YouTuber Favorit:</b></td><td>Van</td></tr>
+        <tr><td><b>Genre Film:</b></td><td>Action</td></tr>
+        <tr><td><b>Genre Lagu:</b></td><td> Balada Jazzy</td></tr>
+        <tr><td><b>Idola:</b></td><td>Cristiano Ronaldo</td></tr>
+        <tr><td><b>Musisi Favorit:</b></td><td>Justin Bieber</td></tr>
+        <tr><td><b>Model Rambut:</b></td><td>French crop</td></tr>
+        <tr><td><b>Style Baju:</b></td><td>Casual</td></tr>
+        <tr><td><b>Motto Hidup:</b></td><td>ingin menjadi orang sukses dan suka menolong sesama</td></tr>
+        <tr><td><b>Bahasa:</b></td><td>Jawa, Indonesia, Inggris</td></tr>
+        <tr><td><b>Instagram:</b></td><td>@ek.rsky</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Website Rafflesia Arnoldii | Kelompok 6
+  </footer>
+</body>
+</html>
